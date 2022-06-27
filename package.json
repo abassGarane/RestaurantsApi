@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "nodemon index.ts",
+		"dev": "nodemon src/index.ts",
 		"start": "node dist/index.js",
 		"build": "tsc -p .",
 		"postinstall": "npm run build"
