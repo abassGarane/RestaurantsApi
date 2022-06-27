@@ -1,4 +1,5 @@
 import express from 'express'
+import { PORT } from './config'
 import Database from './services/Database'
 import ExpressApp from './services/ExpressApp'
 const startServer = async () => {
@@ -7,8 +8,8 @@ const startServer = async () => {
 	await Database()
 	await ExpressApp(app)
 
-	app.listen(8080, () => {
-		console.log('listening on http://localhost:8080')
+	app.listen(PORT, () => {
+		console.log(`listening on http://localhost:${PORT}`)
 	})
 }
 

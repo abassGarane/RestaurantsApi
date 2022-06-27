@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import { isExpressionStatement } from 'typescript'
 import { EditVender, VenderLoginInput } from '../dto'
-import { FoodInput } from '../dto/Food.dto'
+import { FoodInput } from '../dto'
 import { Food } from '../models'
 import { generateSignature, validatePassword } from '../utilities'
 import { findVender } from './adminController'

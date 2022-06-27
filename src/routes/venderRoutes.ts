@@ -17,7 +17,7 @@ router.route('/profile').get(getVenderProfile).patch(updateVenderProfile)
 
 router.route('/food').get(getFoods).post(addFood)
 
-router.patch("/coverImages",updateVenderCoverImages)
+router.patch('/coverImages', updateVenderCoverImages)
 router.patch('/service', getVenderService)
 router.get('/', (_req, res) => {
 	return res.json({

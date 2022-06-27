@@ -1,4 +1,3 @@
-import bodyParser from 'body-parser'
 import express, { Application } from 'express'
 import multer from 'multer'
 import path from 'path'
@@ -24,8 +23,8 @@ export default async (app: Application) => {
 	const images = multer({ storage: imageStorage }).array('images', 20)
 
 	/****** Routes  ***/
-	app.use(bodyParser.json())
-	app.use(bodyParser.urlencoded({ extended: true }))
+	app.use(express.json())
+	app.use(express.urlencoded({ extended: true }))
 
 	app.use('/admin', adminRoutes)
 	app.use('/vender', images, venderRoutes)
