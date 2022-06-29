@@ -1,6 +1,7 @@
 import express, { Application } from 'express'
 import multer from 'multer'
 import path from 'path'
+import morgan from 'morgan'
 
 import {
 	adminRoutes,
@@ -10,6 +11,7 @@ import {
 } from '../routes'
 
 export default async (app: Application) => {
+	app.use(morgan('short'))
 	app.use('/images', express.static(path.join(__dirname, 'images')))
 
 	const imageStorage = multer.diskStorage({
